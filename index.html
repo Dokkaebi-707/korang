@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>코랑</title>
+        <style>
+            body  {background-color: black;
+                   font-family: 'Courier New', monospace;}
+            h1    {color: white;
+                   font-family: 'Courier New', monospace;
+                   position: absolute;
+                   top: 40%;
+                   left: 50%;
+                   margin-right: -50%;
+                   transform: translate(-50%, -50%)}
+            p     {color: lightgrey;
+                   font-family: 'Courier New', monospace;}
+            input {padding: 1em;
+                   border: solid 3px white;
+                   background-color: black;
+                   color: white;
+                   font-family: 'Courier New', monospace;
+                   position: absolute;
+                   top: 50%;
+                   left: 50%;
+                   margin-right: -50%;
+                   transform: translate(-50%, -50%)
+                   }
+        </style>
+    </head>
+
+    <body style="background-color:black;">
+        <h1>--• •••- •---</h1>
+        <form onsubmit="getInputValue();">
+            <input type="text" placeholder="누구.. 세요..?" id="password">
+        </form>
+
+       <script>
+          function getInputValue(){
+                // Selecting the input element and get its value
+                var inputVal = document.getElementById("password").value;
+                // Displaying the value
+                if (inputVal == "21-06-24")
+                {
+                    window.location = 'home.html';
+                } else {
+                    alert("까불지마.");
+                }
+            }
+        </script>
+    </body>
+</html>
