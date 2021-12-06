@@ -1,57 +1,111 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>코랑</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-        <style>
-            body  {background-color: black;
-                   font-family: 'Courier New', monospace;}
-            h1    {color: white;
-                   font-family: 'Courier New', monospace;
-                   text-align: center;
-            }
-            p     {color: lightgrey;
-                   font-family: 'Courier New', monospace;}
-            input {padding: 1em;
-                   border: solid 3px white;
-                   background-color: black;
-                   color: white;
-                   font-family: 'Courier New', monospace;
-                   position: absolute;
-                   left: 50%;
-                   margin-right: -50%;
-                   transform: translate(-50%, -50%)
-                   }
-            div {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin-right: -50%;
-                transform: translate(-50%, -50%)
-                }
-        </style>
-    </head>
 
-    <body style="background-color:black;">
-        <div>
-            <form onsubmit="getInputValue();">
-                <h1>--• •••- •---</h1>
-                <br></br>
-                <input type="text" placeholder="누구.. 세요..?" id="password">
-            </form>
-        </div>
-       <script>
-          function getInputValue(){
-                // Selecting the input element and get its value
-                var inputVal = document.getElementById("password").value;
-                // Displaying the value
-                if (inputVal == "21-06-24 7548930572")
-                {
-                    window.location = 'home.html';
-                } else {
-                    alert("까불지마.");
-                }
-            }
-        </script>
-    </body>
+  <head>
+    <title>코랑</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <style>
+      body {
+        background-color: black;
+        font-family: 'Courier New', monospace;
+      }
+
+      h1 {
+        color: white;
+        font-family: 'Courier New', monospace;
+        text-align: center;
+      }
+
+      p {
+        color: lightgrey;
+        font-family: 'Courier New', monospace;
+      }
+
+      input {
+        padding: 1em;
+        border: solid 3px white;
+        background-color: black;
+        color: white;
+        font-family: 'Courier New', monospace;
+        position: absolute;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+      }
+
+      input:focus {
+        outline: none
+      }
+
+      div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes fadeInAnimation {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeOutAnimation {
+        0% {
+          opacity: 1;
+        }
+
+        100% {
+          opacity: 0;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body style="background-color:black;">
+    <script>
+      function getInputValue() {
+        // Selecting the input element and get its value
+        var inputVal = document.getElementById("password").value;
+        // Displaying the value
+        if (inputVal == "21-06-24 JH" || inputVal == "21-06-24 YJ") {
+          homeTransition(document.getElementById("heading"), 1000);
+        } else {
+          alert("까불지마.");
+        }
+      }
+    </script>
+
+    <div>
+      <form onsubmit="getInputValue(); return false">
+        <h1 id="heading">--• •••- •---</h1>
+        <br></br>
+        <input type="text" placeholder="누구.. 세요..?" id="password">
+      </form>
+    </div>
+
+    <script>
+    function homeTransition( el, speed ) {
+      var seconds = speed/1000;
+      el.style.transition = "opacity "+seconds+"s ease";
+      el.style.opacity = 0;
+
+      setTimeout(homeRedirect, 10000);  
+    }
+
+    function homeRedirect() {
+      window.location.replace('home.html');
+    }
+    </script>
+  </body>
+
 </html>

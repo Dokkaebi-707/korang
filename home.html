@@ -1,33 +1,105 @@
 <!DOCTYPE html>
-    <head>
-        <title>코랑</title>
-        <style>
-            body  {background-color: black;
-                   font-family: 'Courier New', monospace;}
-            h1    {color: white;
-                   font-family: 'Courier New', monospace;
-                   position: absolute;
-                   top: 40%;
-                   left: 50%;
-                   margin-right: -50%;
-                   transform: translate(-50%, -50%)}
-            p     {color: lightgrey;
-                   font-family: 'Courier New', monospace;}
-            input {padding: 1em;
-                   border: solid 3px white;
-                   background-color: black;
-                   color: white;
-                   font-family: 'Courier New', monospace;
-                   position: absolute;
-                   top: 50%;
-                   left: 50%;
-                   margin-right: -50%;
-                   transform: translate(-50%, -50%)
-                   }
-        </style>
-    </head>
 
-    <body>
-        <h1>안녕!</h1>
-    </body>
+<head>
+  <title>코랑</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <style>
+    body {
+      background-color: rgb(255, 187, 0);
+      font-family: 'Courier New', monospace;
+      animation: fadeInAnimation ease 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+
+    h1 {
+      color: black;
+      font-family: 'Courier New', monospace;
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%)
+    }
+
+    p {
+      color: rgb(27, 27, 27);
+      font-family: 'Courier New', monospace;
+    }
+
+    div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      animation: fadeInAnimation ease 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+
+    .button-grid{
+      padding: 20px;
+      display: grid;
+      color: white;
+      background-color: none;
+      grid-template-columns: 100px 100px 100px 100px;
+      grid-template-rows: 50px 50px 50px 50px;
+      transform: translate(-50%, 0%);
+      animation: fadeInAnimation ease 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+
+    }
+
+    button{
+      color: white;
+      border: solid white 1px;
+      font-family: 'Courier New', monospace;
+      font-weight: bolder;
+      background-color: black;
+    }
+
+    button:hover{
+      color: black;
+      border: solid black 3px;
+      font-family: 'Courier New', monospace;
+      font-weight: bolder;
+      background-color: rgb(107, 49, 134);
+    }
+
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+        background-color: black;
+      }
+
+      100% {
+        opacity: 1;
+        background-color: rgb(255, 187, 0);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>돌아온걸 환영해</h1>
+
+  <div class="button-grid">
+
+    <button type="button" onmousedown='sadResponse();'>슬퍼</button>
+    <button type="button" onmousedown='sadResponse();'>행복해</button>
+    <button type="button" onmousedown='sadResponse();'>궁금해</button>
+    <button type="button" onmousedown='sadResponse();'>그냥~</button>
+
+  </div>
+
+  <script>
+    function sadResponse(){
+      alert('안돼!')
+    }
+  </script>
+</body>
+
 </html>
