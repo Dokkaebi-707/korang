@@ -3,6 +3,8 @@
 <head>
   <title>코랑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
   <style>
     body {
       background-color: rgb(255, 187, 0);
@@ -12,11 +14,29 @@
       animation-fill-mode: forwards;
     }
 
+    .night {
+      background-color: rgb(84, 49, 167);
+      font-family: 'Courier New', monospace;
+      animation: fadeInNightAnimation ease 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+
     h1 {
       color: black;
       font-family: 'Courier New', monospace;
       position: absolute;
       top: 20%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%)
+    }
+
+    h4 {
+      color: black;
+      font-family: 'Courier New', monospace;
+      position: absolute;
+      top: 25%;
       left: 50%;
       margin-right: -50%;
       transform: translate(-50%, -50%)
@@ -38,13 +58,23 @@
       animation-fill-mode: forwards;
     }
 
+    div.night {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      animation: fadeInNightAnimation ease 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+
     .button-grid{
       padding: 20px;
       margin-left: auto;
       margin-right: auto;
       display: grid;
       color: white;
-      background-color: none;
       grid-template-columns: 100px 100px 100px 100px;
       grid-template-rows: 50px 50px 50px 50px;
       transform: translate(-50%, 0%);
@@ -54,7 +84,22 @@
 
     }
 
-    button{
+    .button-grid.night{
+      padding: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      display: grid;
+      color: white;
+      grid-template-columns: 100px 100px 100px 100px;
+      grid-template-rows: 50px 50px 50px 50px;
+      transform: translate(-50%, 0%);
+      animation: fadeInNightAnimation ease 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+
+    }
+
+    button {
       color: white;
       border: solid white 1px;
       font-family: 'Courier New', monospace;
@@ -73,6 +118,14 @@
       background-color: rgb(107, 49, 134);
     }
 
+    button:hover.night{
+      color: black;
+      border: solid black 3px;
+      font-family: 'Courier New', monospace;
+      font-weight: bolder;
+      background-color: rgb(255, 187, 0);
+    }
+
     @keyframes fadeInAnimation {
       0% {
         opacity: 0;
@@ -85,10 +138,50 @@
       }
     }
 
+    @keyframes fadeInNightAnimation {
+      0% {
+        opacity: 0;
+        background-color: black;
+      }
+
+      100% {
+        opacity: 1;
+        background-color: rgb(84, 49, 167);
+      }
+    }
+
   </style>
+
+  <script>
+
+    function setBG()
+    {
+      var currentDate = new Date();
+      var currentTime = currentDate.getHours();
+
+      if (currentTime <= 6 || currentTime >= 18)
+      {
+       document.body.style.backgroundColor = "rgb(84, 49, 167)";
+       document.body.style.animation = "fadeInNightAnimation";
+      } else {
+
+      }
+    }
+
+    function sadResponse()
+    {
+      alert('안돼!');
+    }
+  </script>
 </head>
 
-<body>
+<body onload="setBG();">
+
+  <h1 style="color:red">코랑 오프라인이에요</h1>
+  <h4 style="color:black">알림이 전송되었습니다</h4>
+
+  <!--
+
   <h1>돌아온걸 환영해</h1>
 
   <div class="button-grid">
@@ -100,11 +193,7 @@
 
   </div>
 
-  <script>
-    function sadResponse(){
-      alert('안돼!')
-    }
-  </script>
+  //-->
 </body>
 
 </html>

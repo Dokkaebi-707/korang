@@ -21,6 +21,19 @@
         font-family: 'Courier New', monospace;
       }
 
+      video {
+        position: absolute;
+        margin-top: -51%;
+        margin-left: -100%;
+        width: 300%;
+        height: 300%;
+        -o-object-fit: contain;
+        object-fit: contain;
+        -o-object-position: center;
+        object-position: center;
+        z-index: -1;
+      }
+
       input {
         padding: 1em;
         border: solid 3px white;
@@ -33,11 +46,17 @@
         transform: translate(-50%, -50%)
       }
 
+      .overlay h1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      }
+
       input:focus {
         outline: none
       }
 
-      div {
+      .background {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -85,20 +104,27 @@
       }
     </script>
 
-    <div>
+    <div class='background'>
       <form onsubmit="getInputValue(); return false">
-        <h1 id="heading">--• •••- •---</h1>
-        <br></br>
+          <video id='intro' width="1000" height="1000" muted>
+            <source src="video/korang_intro.mp4" type="video/mp4">
+          </video>
+        <div class='overlay'>
+          <h1 id="heading">--• •••- •---</h1>
+          <br></br>
         <input type="text" placeholder="누구.. 세요..?" id="password">
+        </div>
       </form>
     </div>
 
     <script>
+    var vid = document.getElementById("intro");
+      
     function homeTransition( el, speed ) {
       var seconds = speed/1000;
       el.style.transition = "opacity "+seconds+"s ease";
       el.style.opacity = 0;
-
+      vid.play();
       setTimeout(homeRedirect, 10000);  
     }
 
