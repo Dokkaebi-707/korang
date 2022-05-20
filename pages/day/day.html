@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>코랑</title>
+  <link rel="stylesheet" href="./day_style.css">
+
+</head>
+
+<style>
+	@keyframes fadeInAnimation {
+		0% {
+		  opacity: 0;
+		}
+  
+		100% {
+		  opacity: 1;
+		}
+	  }
+</style>
+
+<script>
+
+var text = ['너 왔어 여보!', '너무 반가워!', '그리고 사랑해', '이제 뭐 할거야?'];
+var intro = false;
+var index = 0;
+
+function changeText() {
+
+if (index == 4)
+{
+	clearInterval(interval);
+	intro = true;
+} else {
+  document.getElementById("welcome_text").innerText = text[index];
+  index = (index + 1);
+}
+}
+
+var interval = window.setInterval(changeText, 2000);
+
+function soonResponse(){
+    alert('Coming soon 여보~')
+}
+
+</script>
+
+<body>
+<!-- partial:index.partial.html -->
+<div class="night-sky">
+	<ul>
+	</ul>
+	
+	<div class="clouds">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	
+	<div class="clouds">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</div>
+<div class="moon">
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+
+<div class="sea-horizon">
+	<div class="sea-shine">
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			
+			<li></li>
+			<li></li>
+			
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</div>
+<!-- partial -->
+  
+<h1 id="welcome_text"></h1>
+<div class="frame">
+	<a href="">
+		<button class="custom-btn-left btn-3" onmousedown='soonResponse();'><span>우리의 사진 보자!</span></button>
+	</a>
+	<a href="../counter/counter.html">
+		<button class="custom-btn-mid btn-3"><span>하루 카운터</span></button>
+	</a>
+	<a href="">
+		<button class="custom-btn-right btn-3" onmousedown='soonResponse();'><span>내 피아노 노래</span></button>
+	</a>
+	
+
+</div>
+
+
+</body>
+</html>

@@ -129,7 +129,22 @@
     }
 
     function homeRedirect() {
-      window.location.replace('home.html');
+
+      var day = false;
+      var currentDate = new Date();
+      var currentTime = currentDate.getHours();
+
+      if(currentTime >= 6 && currentTime <= 18)
+      {
+        day = true;
+      }
+
+      if (day)
+      {
+        window.location.replace('pages/day/day.html');
+      } else {
+        window.location.replace('pages/night/night.html');
+      }
     }
     </script>
   </body>
