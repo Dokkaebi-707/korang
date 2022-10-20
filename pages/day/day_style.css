@@ -1589,3 +1589,8 @@ background: linear-gradient(0deg, rgb(238, 234, 0) 0%, rgb(251, 214, 2) 100%);
     opacity: 0;
   }
 }
+
+  @font-face {
+    font-family: "korean";
+    src: url("korean.ttf");
+  }
