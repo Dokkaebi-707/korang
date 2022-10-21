@@ -12,18 +12,18 @@ let secondCard = false;
 
 //Items array
 const items = [
-  { name: "bee", image: "korang.co/img/match/1.png" },
-  { name: "crocodile", image: "korang.co/img/match/2.png" },
-  { name: "macaw", image: "korang.co/img/match/3.png" },
-  { name: "gorilla", image: "korang.co/img/match/4.png" },
-  { name: "tiger", image: "korang.co/img/match/5.png" },
-  { name: "monkey", image: "korang.co/img/match/6.png" },
-  { name: "chameleon", image: "korang.co/img/match/7.png" },
-  { name: "piranha", image: "korang.co/img/match/8.png" },
-  { name: "anaconda", image: "korang.co/img/match/9.png" },
-  { name: "sloth", image: "korang.co/img/match/10.png" },
-  { name: "cockatoo", image: "korang.co/img/match/11.png" },
-  { name: "toucan", image: "korang.co/img/match/12.png" },
+  { name: "bee", image: "../../../img/match/1.png" },
+  { name: "crocodile", image: "../../../img/match/2.png" },
+  { name: "macaw", image: "../../../img/match/3.png" },
+  { name: "gorilla", image: "../../../img/match/4.png" },
+  { name: "tiger", image: "../../../img/match/5.png" },
+  { name: "monkey", image: "../../../img/match/6.png" },
+  { name: "chameleon", image: "../../../img/match/7.png" },
+  { name: "piranha", image: "../../../img/match/8.png" },
+  { name: "anaconda", image: "../../../img/match/9.png" },
+  { name: "sloth", image: "../../../img/match/10.png" },
+  { name: "cockatoo", image: "../../../img/match/11.png" },
+  { name: "toucan", image: "../../../img/match/12.png" },
 ];
 
 //Initial Time
