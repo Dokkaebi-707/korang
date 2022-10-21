@@ -3,50 +3,50 @@ html, body {
   height: 100%;
   overflow: hidden;
   width: 100%;
+  font-family: 'korean';
 }
 
 h1 {
   color: white;
   text-shadow: 0 0 20px hsl(286, 100%, 50%);
   text-align: center;
-  position: absolute;
-  bottom: 15%;
+  font-family: 'korean';
+  position: relative;
+  align-items: center;
   top: 65%;
-  left: 21%;
-  right: 20%;
 }
 
 .frame {
-  width: 90%;
+  width: 13%;
   margin: 40px auto;
   text-align: center;
+  position: relative;
+  align-items: center;
+  top: 65%;
 }
 
 button {
+  scale: 1.5;
+  font-size: medium;
   margin: 20px;
   position: absolute;
-  bottom: 15%;
-  top: 75%;
-  left: 20%;
-  right: 20%;
+  font-family: 'korean';
 }
 
 .custom-btn-left {
   max-width: 100%;
   width: 130px;
   height: 40px;
-  color: #fff;
+  color: black;
   border-radius: 5px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'korean';
   font-weight: 500;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
-  position: absolute;
-  bottom: 15%;
+  position: relative;
+  align-items: center;
   top: 75%;
-  left: 46%;
-  right: 20%;
    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
@@ -57,18 +57,16 @@ button {
   max-width: 100%;
   width: 130px;
   height: 40px;
-  color: #fff;
+  color: black;
   border-radius: 5px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'korean';
   font-weight: 500;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
-  position: absolute;
-  bottom: 15%;
-  top: 80%;
-  left: 46%;
-  right: 20%;
+  position: relative;
+  align-items: center;
+  top: 75%;
    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
@@ -79,18 +77,16 @@ button {
   max-width: 100%;
   width: 130px;
   height: 40px;
-  color: #fff;
+  color: black;
   border-radius: 5px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'korean';
   font-weight: 500;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
-  position: absolute;
-  bottom: 15%;
-  top: 85%;
-  left: 46%;
-  right: 20%;
+  position: relative;
+  align-items: center;
+  top: 75%;
    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
@@ -1631,7 +1627,7 @@ background: linear-gradient(0deg, rgb(123, 0, 238) 0%, rgb(151, 2, 251) 100%);
   }
 }
 
-  @font-face {
-    font-family: "korean";
-    src: url("korean.ttf");
-  }
+@font-face {
+  font-family: "korean";
+  src: url("../../korean.ttf");
+}

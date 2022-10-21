@@ -9,26 +9,27 @@ h1 {
   color: rgb(0, 0, 0);
   text-shadow: 0 0 20px hsl(0, 0%, 100%);
   text-align: center;
-  position: absolute;
-  bottom: 15%;
+  font-family: 'korean';
+  position: relative;
+  align-items: center;
   top: 65%;
-  left: 21%;
-  right: 20%;
 }
 
 .frame {
-  width: 90%;
+  width: 10%;
   margin: 40px auto;
   text-align: center;
+  position: relative;
+  align-items: center;
+  top: 65%;
 }
 
 button {
+  scale: 1.5;
+  font-size: medium;
   margin: 20px;
   position: absolute;
-  bottom: 15%;
-  top: 75%;
-  left: 20%;
-  right: 20%;
+  font-family: 'korean';
 }
 
 .custom-btn-left {
@@ -37,16 +38,14 @@ button {
   height: 40px;
   color: black;
   border-radius: 5px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'korean';
   font-weight: 500;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
-  position: absolute;
-  bottom: 15%;
+  position: relative;
+  align-items: center;
   top: 75%;
-  left: 46%;
-  right: 20%;
    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
@@ -59,16 +58,14 @@ button {
   height: 40px;
   color: black;
   border-radius: 5px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'korean';
   font-weight: 500;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
-  position: absolute;
-  bottom: 15%;
-  top: 80%;
-  left: 46%;
-  right: 20%;
+  position: relative;
+  align-items: center;
+  top: 75%;
    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
@@ -81,16 +78,14 @@ button {
   height: 40px;
   color: black;
   border-radius: 5px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'korean';
   font-weight: 500;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
-  position: absolute;
-  bottom: 15%;
-  top: 85%;
-  left: 46%;
-  right: 20%;
+  position: relative;
+  align-items: center;
+  top: 75%;
    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
@@ -100,6 +95,7 @@ button {
 .btn-3 {
   background: rgb(238, 214, 0);
 background: linear-gradient(0deg, rgb(238, 234, 0) 0%, rgb(251, 214, 2) 100%);
+font-family: 'korean';
   width: 130px;
   height: 40px;
   line-height: 42px;
@@ -109,6 +105,7 @@ background: linear-gradient(0deg, rgb(238, 234, 0) 0%, rgb(251, 214, 2) 100%);
 }
 .btn-3 span {
   position: relative;
+  font-family: 'korean';
   display: block;
   width: 100%;
   height: 100%;
@@ -1590,7 +1587,7 @@ background: linear-gradient(0deg, rgb(238, 234, 0) 0%, rgb(251, 214, 2) 100%);
   }
 }
 
-  @font-face {
-    font-family: "korean";
-    src: url("korean.ttf");
-  }
+@font-face {
+  font-family: "korean";
+  src: url("../../korean.ttf");
+}

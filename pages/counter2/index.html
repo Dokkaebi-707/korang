@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>하루 카우터</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+  <h1 id='timer'></h1>
+  <canvas id="canvas" width="1400" height="600"></canvas>
+  
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+  <script>
+
+    function updateTimer() {
+      future  = Date.parse("June 24, 2021 00:00:00");
+      now     = new Date();
+      diff    = now - future;
+      
+      days  = Math.floor( diff / (1000*60*60*24) );
+      hours = Math.floor( diff / (1000*60*60) );
+      mins  = Math.floor( diff / (1000*60) );
+      secs  = Math.floor( diff / 1000 );
+      
+      d = days;
+      h = hours - days  * 24;
+      m = mins  - hours * 60;
+      s = secs  - mins  * 60;
+      
+      document.getElementById("timer")
+        .innerHTML =
+        '<div>♡ ' + d + '<span> Days ♡</span></div>';
+      }
+      setInterval('updateTimer()', 1000 );
+    
+  </script>
+
+</body>
+</html>

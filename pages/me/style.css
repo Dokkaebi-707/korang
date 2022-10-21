@@ -1,0 +1,36 @@
+body {
+  scale: 1.3;
+  height: 100vh;
+  background-color: #000000;
+  align-items: center;
+  top: 70%;
+  left: 42%;
+  position: absolute;
+}
+
+h1 {
+  font-family: 'korean';
+  font-style: normal;
+  font-size: 25px;
+  position: absolute;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  line-height: 100px;
+  top: -200px;
+  scale: 2;
+
+  color: white;
+}
+
+button {
+  font-family: 'korean';
+  align-self: center;
+  position: absolute;
+  align-content: center;
+}
+
+@font-face {
+  font-family: 'korean';
+  src: url("../../korean.ttf");
+}
